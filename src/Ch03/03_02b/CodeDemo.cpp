@@ -7,19 +7,29 @@
 
 enum class cow_purpose {dairy, meat, hide, pet};
 
-struct cow{
+class cow {
+    public:
+    cow(std::string nameI) {
+        name = nameI;
+    }
+    std::string getName() const {
+        return name;
+    }
+    int getAge() const {
+        return age;
+    }
+    cow_purpose getPurpose() const {
+        return purpose;
+    }
+    private:
     std::string name;
     int age;
     cow_purpose purpose;
 };
 
 int main(){
-    cow my_cow;
-    my_cow.age = 5;
-    my_cow.name = "Betsy";
-    my_cow.purpose = cow_purpose::dairy;
-    std::cout << my_cow.name << " is a type-" << (int)my_cow.purpose << " cow." << std::endl;
-    std::cout << my_cow.name << " is " << my_cow.age << " years old." << std::endl;
+    cow my_cow("leslie");
+    std::cout << my_cow.getName() << std::endl;
     
     std::cout << std::endl << std::endl;
     return (0);

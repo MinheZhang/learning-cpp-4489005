@@ -6,6 +6,13 @@
 #include <string>
 
 int main(){
+    int a = 37;
+    int *prtA = &a;
+
+    std::cout << &a << std::endl;
+    std::cout << prtA << std::endl;
+    std::cout << *prtA << std::endl;
+    std::cout << &prtA << std::endl;
 
     std::cout << std::endl << std::endl;
     return (0);
